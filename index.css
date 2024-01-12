@@ -1,0 +1,135 @@
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f5f5f5;
+  background-image: url("https://t4.ftcdn.net/jpg/04/24/19/87/240_F_424198770_Pm85vQdUnsolbIq26LtxsgUDEFfi4bcK.jpg");
+  background-size: 100% 100%; /*to cover the entire screen */
+  background-repeat: no-repeat;
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;}
+
+.calculator {
+  /* creating grid  */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  grid-gap: 10px;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #efefef;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.display {
+  grid-column: span 4;
+  background-color: #d9d9d9;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.8em;
+  border-radius: 8px;
+}
+
+.te {
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-bottom: 0px; */
+}
+
+.te h1 {
+  color: #2e6da4;
+  font-size: 1.8em;
+  margin-bottom: 0%;
+  border-left: #2e6da4;
+}
+
+#greeting {
+  color: #2e6da4;
+  font-size: 1.2em;
+  margin-bottom: 12%;
+  padding-top: 0px;
+  font-weight: 520;
+}
+
+.inbut,
+.button,
+.equal,
+.backspace {
+  padding: 8px;
+  font-size: 1.3em;
+  cursor: pointer;
+  background-color: #b0b0b0;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.inbut:hover,
+.button:hover,
+.equal:hover,
+.backspace:hover {
+  background-color: #999;
+}
+
+.equal {
+  background-color: #b0b0b0;
+  color: #fff;
+}
+
+.equal:hover {
+  background-color: #444;
+}
+
+.backspace {
+  background-color: #e68a00;
+  color: #fff;
+}
+
+.backspace:hover {
+  background-color: #cc7a00;
+}
+.numero {
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 1.3em;
+  cursor: pointer;
+  background-color: #4187a5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.numero:hover {
+  background-color: #2e6da4;
+}
+
+@media screen and (max-width: 600px) {
+  .calculator {
+    max-width: 100%;}
+    
+  .inbut,
+  .button,
+  .equal,
+  .backspace,
+  .numero {
+    font-size: 1em;
+  }
+  .display {
+    font-size: 1.3em;
+ }
+}
